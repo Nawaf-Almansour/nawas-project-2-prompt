@@ -1,0 +1,2 @@
+module TheMuneHelper
+end

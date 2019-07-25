@@ -1,0 +1,35 @@
+<h1>book</h1>
+
+
+
+<table class="table">
+  <thead>
+
+    <tr>
+      <th>title</th>
+      <th>category</th>
+      <th>year published</th>
+      <th>image</th>
+      <th>description</th>
+      <th>price</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @book.each do  |f|  %>
+    <tr>
+      <td><%=f.title %></td>
+      <td><%=  f.category %></td>
+      <td><%=  f.book_year_published %></td>
+      <td><%=  f.image %></td>
+      <td><%=  f.description %></td>
+      <td><%=  f.price %></td>
+      <td><%=link_to "Edit" , edit_book_path(f)  %></td>
+      <td><%=link_to "Remove", f, method: :delete  %></td>
+
+      <%end%>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'new', new_book_path %>

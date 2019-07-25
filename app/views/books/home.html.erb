@@ -1,0 +1,33 @@
+<button type="button" class="btn btn-lg btn-block btn-success text-uppercase">
+  <%= link_to cart_path(@current_cart) do %>
+      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          Checkout >>  Cart
+          <% end %>
+</button>
+<h1>
+  bookstore
+</h1>
+
+<div class="container-fluid">
+  <h4>Complex Gallery</h4>
+  <div class="row d-inline-flex">
+    <!-- Gallery Item 1 -->
+    <% @book.each do |f|  %>
+      <div class="col-8 col-sm-4 col-md-3 p-2">
+        <div class="card h-100">
+          <%= image_tag(f.image, size: "150x250", alt: "Image" , class:"card-img-top") %>
+          <h4 class="card-title text-center">
+            <%=f.title %></h4>
+          <h6 class="card-title text-center">
+            <%=f.category %></h6>
+            <%=button_to order_details_path(:book_id => f.id), class: "btn btn-warning" , style: "margin-top:15px;" , params:{bookID: f.id} do %>
+                <i class="glyphicon glyphicon-plus" style="color:black;"></i>
+                Add to Basket
+              <% end %>
+           <p class="card-text text-center"><%= f.book_year_published %></p>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+<%= will_paginate @book %>
