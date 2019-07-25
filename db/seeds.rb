@@ -7,10 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 # User.create!(name:  'admin',
-#              email: 'admin@nawas.org',
-#              password:              '4499',
-#              password_confirmation: '4499',
+#              email: 'admin1@nawas.org',
+#              password:              '449988',
+#              password_confirmation: '449988',
 #              admin:     true)
+
+             User.create!(name:  'admin',
+                          email: 'admin2@nawas.org',
+                          password:              '449988',
+                          password_confirmation: '449988',
+                          admin:     true)
 
 book = Book.create( title:'Python Crash Course', category:'programming' ,book_year_published:'2018-06-23' ,image:'p1.jpg', description: 'by Eric Matthes (Author)' , price: 27.33)
 book = Book.create( title:'C# Programming', category:'programming' ,book_year_published:'2019-03-23' ,image:'c2.jpg', description: 'by William Sullivan (Author)' , price: 16.37)

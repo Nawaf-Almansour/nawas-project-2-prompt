@@ -14,5 +14,78 @@
  *= require_self
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "colors";
+ .navbar-brand{
+     color: $color-4;
+ }
  @import "bootstrap";
  @import "mane";
+ @import "base";
+ @import "util";
+
+
+body{
+  background-color: #f1f1f1;
+}
+
+.navbar_c{
+background-color:  $color-2;
+color: $color-4;
+}
+
+.text_nav{
+  color: $color-4;
+}
+
+.text_nav {
+    color: #ebf5fb;
+}
+.navbar-toggler{
+  background-color: rgba(#3d5a6c, 0.59);
+}
+.navbar-brand{
+  color:  $color-6;
+
+}
+.footerx{
+  padding-top: 80px;
+  height: 200px;
+}
+.footer{
+  color:#f7f7f9;
+  background-color:  $color-2;
+  width: 100%;
+
+}
+.footerx h2{
+  color:  $color-6;
+}
+
+.btn_x{
+  padding: 5px 60px;
+  margin-left: 40px;
+  border: 1px solid $color-2;
+
+}
+.pro-text {
+  font-size: 12px;
+}
+
+
+.pag_x{
+  margin-left: 60px;
+  margin-top: 25px;
+
+
+}
+.pag_m{
+height: 100px;
+
+}
+.img_s{
+  height: 280px;
+}
+
+.btnc_cart{
+    width: 400px;
+}

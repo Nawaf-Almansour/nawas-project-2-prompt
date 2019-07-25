@@ -1,36 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Nawas</a>
+<nav class="navbar navbar-expand-lg  navbar_c">
+  <a class="navbar-brand text_nav" href="/">Nawas</a>
   <% if user_signed_in? %>
-  <a class="navbar-brand" href="/"> welcome <%= current_user.email %> </a>
+  <a class="navbar-brand text_nav" href="/"> welcome <%= current_user.email %> </a>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler text_nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text_nav"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to 'Home', root_path, class: "nav-link #{yield(:blog_active)}" %>
+        <%= link_to 'Home', root_path, class: "nav-link text_nav #{yield(:blog_active)}" %>
       </li>
       <%   if user_signed_in? && current_user.admin? %>
       <li class="nav-item">
-        <%= link_to 'store',  books_path, class: "nav-link #{yield(:blog_active)}" %>
+        <%= link_to 'store',  books_path, class: "nav-link text_nav #{yield(:blog_active)}" %>
       </li>
           <% end %>
 
       <% if !user_signed_in? %>
 
       <li class="nav-item">
-        <%= link_to 'Log In',   user_session_path, class: "nav-link #{yield(:blog_active)}" %>
+        <%= link_to 'Log In',   user_session_path, class: "nav-link text_nav #{yield(:blog_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Register',  new_user_registration_path, class: "nav-link #{yield(:blog_active)}" %>
+        <%= link_to 'Register',  new_user_registration_path, class: "nav-link text_nav #{yield(:blog_active)}" %>
       </li>
       <% end %>
 
       <% if user_signed_in? %>
       <li class="nav-item">
-        <%= link_to 'Log out',  destroy_user_session_path, class: "nav-link #{yield(:blog_active)}",  method: :delete %>
+        <%= link_to 'Log out',  destroy_user_session_path, class: "nav-link text_nav #{yield(:blog_active)}",  method: :delete %>
         <!-- Users -->
       </li>
       <% end %>

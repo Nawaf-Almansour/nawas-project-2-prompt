@@ -1,4 +1,4 @@
-<h1>book</h1>
+<% provide(:page_title, 'srote') %>
 
 
 
@@ -21,15 +21,16 @@
       <td><%=f.title %></td>
       <td><%=  f.category %></td>
       <td><%=  f.book_year_published %></td>
-      <td><%=  f.image %></td>
+      <!-- <td><%=  f.image %></td> -->
+      <td> <%= image_tag(f.image, size: "10x70", alt: "Image" , class:"card-img-top") %></td>
       <td><%=  f.description %></td>
       <td><%=  f.price %></td>
-      <td><%=link_to "Edit" , edit_book_path(f)  %></td>
-      <td><%=link_to "Remove", f, method: :delete  %></td>
+      <td><%=link_to "Edit" , edit_book_path(f) , class: 'btn btn-success btn-block' %></td>
+      <td><%=link_to "Remove", f, method: :delete  ,class: 'btn btn-warning btn-sm'%></td>
 
       <%end%>
     </tr>
   </tbody>
 </table>
 
-<%= link_to 'new', new_book_path %>
+<%= link_to 'new', new_book_path  ,class: 'btn btn-primary btn-lg'%>
