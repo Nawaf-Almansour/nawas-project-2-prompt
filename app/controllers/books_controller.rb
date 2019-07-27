@@ -29,7 +29,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to books_path, alert: "User created successfully."
     else
-      redirect_to new_books_path, alert: "Error creating user."
+      redirect_to cart_path(@current_cart), alert: "Error creating user."
     end
   end
 
@@ -45,7 +45,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-      @book.destroy 
+      @book.destroy
       redirect_to books_path , alert: 'Are you sure?'
   end
 
