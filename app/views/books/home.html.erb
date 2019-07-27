@@ -1,6 +1,5 @@
 <% provide(:page_title, 'home') %>
 
-
 <div id="carouselExampleControls" class="  carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -27,9 +26,10 @@
 
 <br>
 <br>
+<div class="home">
 
    <%= link_to cart_path(@current_cart) , class: "btn btn-success btnc_cart" do  %>
-      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+       <%= fa_icon("cart-plus") %>
            Cart
           <% end %>
 
@@ -45,14 +45,15 @@
       <div class="col-8 col-sm-4 col-md-3 p-2">
         <div class="card h-100">
           <%= image_tag(f.image, size: "150x250", alt: "Image" , class:"card-img-top") %>
-          <h4 class="card-title text-center">
+          <h4 class="card-title text-center text-title">
             <%=f.title %></h4>
           <h6 class="card-title text-center">
           category: <%=f.category %></h6>
-            <h6 class="card-title text-center">
+            <h6 class="card-title text-center text-price">
               price: $<%=f.price %></h6>
-            <%=button_to order_details_path(:book_id => f.id), class: "btn btn-warning  btn_x " , style: "margin:5px" , params:{bookID: f.id} do %>
+            <%=button_to order_details_path(:book_id => f.id), class: "btn btn-warning  btn_x "  , params:{bookID: f.id} do %>
                 <i class="glyphicon glyphicon-plus" style="color:black;"></i>
+                <%= fa_icon("glyphicon-plus") %>
                 Add to Cart
               <% end %>
            <p class="pro-text card-text text-center">published: <%= f.book_year_published %></p>
@@ -65,5 +66,7 @@
 
 <div class="pag_x digg_pagination">
   <%= will_paginate @book %>
+  <br>
+</div>
 </div>
 </div>

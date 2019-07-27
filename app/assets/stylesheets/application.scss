@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "colors";
@@ -19,9 +20,12 @@
      color: $color-4;
  }
  @import "bootstrap";
+ @import "font-awesome";
  @import "mane";
  @import "base";
  @import "util";
+ @import "home";
+
 
 
 body{
@@ -61,10 +65,12 @@ color: $color-4;
   color:  $color-6;
 }
 
-.btn_x{
-  padding: 5px 60px;
-  margin-left: 40px;
-  border: 1px solid $color-2;
+.footer-branding{
+  background-color:  #000;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  color: #fff;
 
 }
 .pro-text {
