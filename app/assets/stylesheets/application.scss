@@ -12,40 +12,36 @@
  *
  *= require_tree .
  *= require_self
+ /*
+ *= require font-awesome
  */
+
+
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "colors";
- .navbar-brand{
-     color: $color-4;
- }
+ @import "font-awesome";
  @import "bootstrap";
  @import "mane";
  @import "base";
+ @import "home";
  @import "util";
-
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway&display=swap');
 
 body{
   background-color: #f1f1f1;
 }
-
-.navbar_c{
-background-color:  $color-2;
-color: $color-4;
-}
-
-.text_nav{
-  color: $color-4;
-}
-
-.text_nav {
-    color: #ebf5fb;
-}
-.navbar-toggler{
-  background-color: rgba(#3d5a6c, 0.59);
-}
-.navbar-brand{
+.text_nav_new{
   color:  $color-6;
+}
+.bg-blue{
+  background-color: $color-2;
+}
 
+.navbar-brand-s{
+  color:  $color-6;
+ text-decoration-style: none;
+ font-weight: bold;
+ font-size: 18px;
 }
 .footerx{
   padding-top: 80px;
@@ -62,10 +58,10 @@ color: $color-4;
 }
 
 .btn_x{
-  padding: 5px 60px;
-  margin-left: 40px;
+  padding: 5px 0px;
   border: 1px solid $color-2;
-
+  margin-left: 10px;
+  width: 90%;
 }
 .pro-text {
   font-size: 12px;
@@ -83,9 +79,14 @@ height: 100px;
 
 }
 .img_s{
-  height: 280px;
+  height: 310px;
 }
 
 .btnc_cart{
-    width: 400px;
+  padding: 10px 0px;
+    width: 300px;
+    margin-left: 10px;
+    border: 1px solid  $color-6;
+    font-size: 26px;
+
 }
