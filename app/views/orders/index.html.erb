@@ -1,0 +1,30 @@
+<h1>order</h1>
+<div class="center jumbotron">
+  <h2>
+    <% if params[:search].blank? %>
+
+      <%if current_user.admin? %>
+        ADMIN --- All Orders (<%= @orders.count %>)
+      <%else%>
+        your order (<%= @current_user.orders.count %>)
+      <%end%>
+    <%else %>
+      Found => [
+      <%= pluralize(@orders.count, " ] Order") %>
+    <%end %>
+  </h2>
+</div>
+
+
+<% @orders.each do |order| %>
+
+  <% if @current_user.admin? %>
+
+    <%= render 'order' , :order => order%>
+
+    <% elsif order.user_id == @current_user.id %>
+
+      <%= render 'order' , :order => order%>
+
+    <%end%>
+  <% end %>

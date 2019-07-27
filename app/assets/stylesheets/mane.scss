@@ -1,0 +1,52 @@
+body{
+  padding: 10px;
+}
+
+.continer-book{
+  width: 500px;
+}
+
+.munitores{
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  /*background-color: #cfc8bc;*/
+  height: 70%;
+  line-height: 0;
+
+}
+
+.munitores-item:hover .munitores-text{
+  padding: 0 15px;
+  width: 82vw;
+  height: 100%;
+  overflow: auto;
+}
+
+.munitores-item {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: #fff;
+    height: 40vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #404040;
+}
+.munitores-item:hover{
+  height: 65vh;
+  width: 75vw;
+  border: 1px solid #e0e0e0;
+
+}
+
+.munitores-card{
+  display: none;
+  padding-left: 10px;
+  align-items: flex-end;
+  height: 20%;
+  background-color: #fafafa;
+  z-index: 3;
+}

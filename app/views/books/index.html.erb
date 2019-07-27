@@ -1,0 +1,36 @@
+<% provide(:page_title, 'srote') %>
+
+
+
+<table class="table">
+  <thead>
+
+    <tr>
+      <th>title</th>
+      <th>category</th>
+      <th>year published</th>
+      <th>image</th>
+      <th>description</th>
+      <th>price</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @book.each do  |f|  %>
+    <tr>
+      <td><%=f.title %></td>
+      <td><%=  f.category %></td>
+      <td><%=  f.book_year_published %></td>
+      <!-- <td><%=  f.image %></td> -->
+      <td> <%= image_tag(f.image, size: "10x70", alt: "Image" , class:"card-img-top") %></td>
+      <td><%=  f.description %></td>
+      <td><%=  f.price %></td>
+      <td><%=link_to "Edit" , edit_book_path(f) , class: 'btn btn-success btn-block' %></td>
+      <td><%=link_to "Remove", f, method: :delete  ,class: 'btn btn-warning btn-sm'%></td>
+
+      <%end%>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'new', new_book_path  ,class: 'btn btn-primary btn-lg'%>
