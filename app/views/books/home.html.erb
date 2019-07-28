@@ -30,7 +30,9 @@
     <%= fa_icon("cart-plus") %>
     Cart
   <% end %>
-
+  <%= link_to orders_path(@current_cart) , class: "btn btn-success btnc_cart" do %>
+    orders
+   <% end %>
   <h1>
     bookstore
   </h1>

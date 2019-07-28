@@ -14,21 +14,25 @@
               <th></th>
               <th >book</th>
               <th></th>
-              <th   class="text-right">Price</th>
+              <th class="text-right">Price</th>
               <th></th>
               <th></th>
 
             </tr>
           </thead>
           <tbody>
-            <% @cart.order_detail.each do |line_item| %>
-             <% end %>
+            <% @cart.order_detail.each do |item| %>
+
             <tr>
-              <td>book</td>
+              <td></td>
+              <td><%= Book.find_by(id:item.book_id).title %></td>
+                <td></td>
+              <td>$ <%= Book.find_by(id:item.book_id).price %></td>
               <td></td>
               <td></td>
-              <td>Sub-Total</td>
-              <td class="text-right"><%= number_to_currency(@cart.sub_total) %></td>
+              <% end %>
+              <!-- <td>Sub-Total</td> -->
+              <!-- <td class="text-right"><%= number_to_currency(@cart.sub_total) %></td> -->
             </tr>
             <tr>
               <td></td>
@@ -38,6 +42,7 @@
               <td>Shipping</td>
               <td class="text-right">free</td>
             </tr>
+
             <tr>
               <td></td>
               <td></td>
